@@ -1,2 +1,2 @@
 # passw-generator
-Simple password generator
+Simple password generator using javascript
