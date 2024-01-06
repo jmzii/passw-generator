@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { FaClone } from "react-icons/fa";
 import generatePassword from "./passwordGenerator";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+// basic app functionality
 function App() {
   const [generatedPassword, setGeneratedPassword] = useState("");
 
@@ -22,12 +25,24 @@ function App() {
     setGeneratedPassword(password);
   };
 
+  // clipboard functionality, shows notification if pwd is copied
   const handleCopyClick = () => {
-    // Tähän copy ikonin toiminnallisuus, clipboard API?
+    navigator.clipboard.writeText(generatedPassword);
+    toast("Password copied!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
+  // styling and putting everything together
   return (
     <section>
+      <ToastContainer />
       <div className="container">
         <form id="pwd-form" onSubmit={handleSubmit}>
           <div className="result">
