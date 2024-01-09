@@ -2,6 +2,8 @@
 
 A simple password generator built with React and JavaScript that works like a VR train's toilet
 
+ // sorry about using Finnish and English in the commits, I forgor I was ment to use only english :( 
+
 ## Demo
 
 ![Start screen](public/passw-generator_demo1.PNG)
