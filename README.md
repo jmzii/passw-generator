@@ -28,13 +28,25 @@ A simple password generator built with React and JavaScript that works like a VR
    ```
 
 2. Navigate to the project directory:
+
+   ```bash
    cd password-generator
 
+   ```
+
 3. Install dependencies:
+
+   ```bash
    npm install
 
+   ```
+
 4. Fire up the application:
+
+   ```bash
    npm run dev
+
+   ```
 
 ## Usage
 
@@ -46,15 +58,15 @@ A simple password generator built with React and JavaScript that works like a VR
 
 ## Features
 
-• Generate secure and randomized passwords with customizable criteria
-• Option to include numbers, uppercase letters, and symbols
-• Password length adjustable between 12 and 20 characters
-• Copy generated password to the clipboard with one click
+- Generate secure and randomized passwords with customizable criteria
+- Option to include numbers, uppercase letters, and symbols
+- Password length adjustable between 12 and 20 characters
+- Copy generated password to the clipboard with one click
 
 ## Technologies used
 
-• React
-• Javascript
+- React
+- Javascript
 
 ## Contributions
 
