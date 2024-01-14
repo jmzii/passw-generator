@@ -71,7 +71,7 @@ A simple password generator built with React and JavaScript that works like a VR
 - React
 - Javascript
 - CSS
-- Robot
+- Robot Framework
 
 ## Contributions
 
