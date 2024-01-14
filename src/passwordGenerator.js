@@ -1,21 +1,24 @@
 const generatePassword = (length, useNumber, useUppercase, useSymbol) => {
   let characters = "abcdefghijklmnopqrstuvwxyz";
   let password = "";
+  let numbers = "1234567890";
+  let uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let symbols = "!@$%^&*";
 
   // fucntionality for the users requirements
   if (useNumber) {
-    characters += "1234567890";
-    password += "1234567890"[Math.floor(Math.random() * 10)];
+    characters += numbers;
+    password += numbers[Math.floor(Math.random() * 10)];
   }
 
   if (useUppercase) {
-    characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    password += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[Math.floor(Math.random() * 26)];
+    characters += uppercaseCharacters;
+    password += uppercaseCharacters[Math.floor(Math.random() * 26)];
   }
 
   if (useSymbol) {
-    characters += "!@#$%^&*()";
-    password += "!@#$%^&*()"[Math.floor(Math.random() * 10)];
+    characters += symbols;
+    password += symbols[Math.floor(Math.random() * 10)];
   }
 
   for (let i = password.length; i < length; i++) {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaClone } from "react-icons/fa";
 import generatePassword from "./passwordGenerator";
 import { ToastContainer, toast } from "react-toastify";
@@ -7,6 +7,10 @@ import "react-toastify/dist/ReactToastify.css";
 // basic app functionality
 function App() {
   const [generatedPassword, setGeneratedPassword] = useState("");
+
+  useEffect(() => {
+    console.log("Generated Password:", generatedPassword);
+  }, [generatedPassword]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
