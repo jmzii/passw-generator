@@ -1,8 +1,8 @@
 # Password Generator
 
-A simple password generator built with React and JavaScript that works like a VR train's toilet
+A simple password generator built with React and JavaScript that works like a VR train's toilet. Also provided automated tests using Robot framework.
 
- // sorry about using Finnish and English in the commits, I forgor I was ment to use only english :( 
+// sorry about using Finnish and English in the commits, I forgor I was ment to use only english :(
 
 ## Demo
 
@@ -64,11 +64,14 @@ A simple password generator built with React and JavaScript that works like a VR
 - Option to include numbers, uppercase letters, and symbols
 - Password length adjustable between 12 and 20 characters
 - Copy generated password to the clipboard with one click
+- Automated testing with Robot framework
 
 ## Technologies used
 
 - React
 - Javascript
+- CSS
+- Robot
 
 ## Contributions
 
