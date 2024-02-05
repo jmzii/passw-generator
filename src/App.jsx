@@ -4,7 +4,7 @@ import generatePassword from "./passwordGenerator";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// basic app functionality
+// app functionality
 function App() {
   const [generatedPassword, setGeneratedPassword] = useState("");
 
@@ -43,7 +43,7 @@ function App() {
     });
   };
 
-  // styling and putting everything together
+  // putting everything together
   return (
     <section>
       <ToastContainer />
