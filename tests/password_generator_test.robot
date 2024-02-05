@@ -10,55 +10,51 @@ ${PASSWORD}    //input[@id='result']
 
 
 *** Test Cases ***
-# Test case 1: Generating password with default options
 Default Password Test
+    [Documentation]    Generating password with default options
     Open Browser  ${BASE_URL}  ${BROWSER}
-    Sleep   1s
     Page Has Elements
     Generate Password
-    Sleep    1s
     Validate Default Password
     Close Browser
 
-# Test case 2: Generating password that includes numbers
 Password With Numbers
+    [Documentation]    Generating password that includes numbers
     Open Browser  ${BASE_URL}  ${BROWSER}
-    Sleep   1s
     Page Has Elements
     Select Checkbox    id=number
-    Sleep    1s
     Generate Password
-    Sleep    1s
     Checkbox Should Be Selected    id=number
     Validate Password With numbers
     Close Browser
 
-# Test case 3: Generating password that includes numbers, symbols, uppercase letters
 Password With Multiple Requirements
+    [Documentation]    Generating password that includes numbers, symbols, uppercase letters
     Open Browser  ${BASE_URL}  ${BROWSER}
-    Sleep    1s
     Page Has Elements
-    Select Checkbox    id=number
-    Select Checkbox    id=uppercase
-    Select Checkbox    id=symbol
-    Sleep    1s
+    Select All Checkboxes
     Generate Password
-    Sleep    1s
     Validate Password With Multiple Requirements
-    Close Browser
-    
+    Close Browser    
 
 [Teardown]    Close All Browsers
 
 
 *** Keywords ***
 Page Has Elements
+    Page Should Contain Element    id=root
+    Page Should Contain Element    id=pwd-form
     Page Should Contain Checkbox    id=number
     Page Should Contain Checkbox    id=uppercase
     Page Should Contain Checkbox    id=symbol
 
 Generate Password
     Click Element    css=#pwd-form button
+
+Select All Checkboxes
+    Select Checkbox    id=number
+    Select Checkbox    id=uppercase
+    Select Checkbox    id=symbol
 
 Validate Default Password
     ${generatedPassword}    Get Value    ${PASSWORD}
